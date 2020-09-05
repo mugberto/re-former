@@ -20,7 +20,7 @@
   <%= submit_tag 'Submit'%> <br><br>
 <% end %> -->
 
-<%= form_for @user, url: {action: "create"} do |f| %>
+<%= form_for @user do |f| %>
 <%= f.label :username, "Username Here:" %>
 <%= f.text_field :username %> <br><br>
 <%= f.label :email, "Email Here:" %>

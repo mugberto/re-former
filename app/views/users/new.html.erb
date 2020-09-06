@@ -20,13 +20,14 @@
   <%= submit_tag 'Submit'%> <br><br>
 <% end %> -->
 
-<%= form_for @user do |f| %>
-  <%= f.label :username, "Username Here:" %>
-  <%= f.text_field :username %> <br><br>
-  <%= f.label :email, "Email Here:" %>
-  <%= f.text_field :email, placeholder: "email@test.com", value: "email@test.com" %><br><br>
-  <%= f.label :password, "Password:" %>
-  <%= f.password_field :password %><br><br>
-  <%= f.submit "Submit"%> 
+<%= form_for @user, url: {action: "create"} do |f| %>
+<%= f.label :username, "Username Here:" %>
+<%= f.text_field :username %> <br><br>
+<%= f.label :email, "Email Here:" %>
+<%= f.text_field :email, placeholder: "email@test.com" %><br><br>
+<%= f.label :password, "Password:" %>
+<%= f.password_field :password %><br><br>
+<%= f.submit "Submit"%>
+  
 <% end %>
 
